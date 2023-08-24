@@ -17,9 +17,13 @@ const getTheWorld = (event) => {
     const word = inputWord.input.value;
     translateWord(word)
         .then(word => {
+            meaningEl.textContent = `${word.meanings[0].definitions[0].definition}`;
             titleEl.textContent = word.word;
             audioEl.setAttribute("src", `${word.phonetics[1].audio}`);
-        });
+        })
+        .catch(error => {
+            console.log(error)
+        })
 }
 
 inputWord.addEventListener("submit", getTheWorld);
