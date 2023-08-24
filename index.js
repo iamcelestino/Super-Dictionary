@@ -12,20 +12,14 @@ const translateWord = async(word) => {
     return data[0];
 }
 
-const displayData = (data) => {
-    const html = `
-        <p>Word Title: <span class="title" id="title">___</span></p>
-        <p>Meaning: <span class="meaning" id="meaning">___</span></p>
-        <audio src="" controls id="audio"></audio>
-        `;
-        meaningContainerEl.innerHTML = html;
-}
-
 const getTheWorld = (event) => {
     event.preventDefault();
     const word = inputWord.input.value;
     translateWord(word)
-        .then(word => console.log(word));
+        .then(word => {
+            titleEl.textContent = word.word;
+            audioEl.setAttribute("src", `${word.phonetics[1].audio}`);
+        });
 }
 
 inputWord.addEventListener("submit", getTheWorld);
