@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@700&family=Poppins&display=swap');
+
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 700px;
+    margin: auto;
+    background-color: rgb(213, 212, 212);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+
+main {
+    flex: 1;
+    margin: 0 0.6rem;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 3rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 50px;
+}
+
+.container > p {
+    text-align: center;
+    color: rgb(213, 212, 212);
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(23, 25, 290);
+    margin: 1rem 0;
+}
+
+ form input {
+    padding: 0.6rem;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid rgb(213, 212, 212);
+}
+
+.meaning-container p{
+    margin: 1rem 0;
+    color:  rgb(23, 25, 290);
+}
+
+form, .meaning-container{
+    margin: 1rem 0;
+}
+
+audio {
+    width: 100%;
+    border-radius: 8px;
+    color: rgb(213, 212, 212);
+}
